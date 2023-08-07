@@ -57,3 +57,13 @@
   display: block;
   margin: auto;
 }
+
+.pagination{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.pagination button{
+  width: 150px;
+  height: 40px;
+  margin: 20px;
+}
