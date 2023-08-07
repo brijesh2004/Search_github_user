@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'; // Import React and the necessary hooks
+import React, { useState, useEffect,useCallback } from 'react'; // Import React and the necessary hooks
 import './App.css';
 function App() {
   const [username, setUsername] = useState("brijesh");
   const [data, setData] = useState({});
 
-  const searchUser = async () => {
+  const searchUser = useCallback(async () => {
     try {
       const response = await fetch(`https://api.github.com/search/users?q=${username}`);
       const responseData = await response.json();
@@ -12,11 +12,11 @@ function App() {
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  }
+  }, [username]); 
 
   useEffect(() => {
     searchUser();
-  } , [username]); // Empty dependency array to run the effect once on initial render
+  } , [username , searchUser]); // Empty dependency array to run the effect once on initial render
 
   return (
     <div className='page'>
