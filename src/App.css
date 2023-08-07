@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.page{
+  margin-top: 50px;
+}
+.users{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.user_box{
+  box-shadow: 0 0 10px;
+  text-align: center;
+  margin: 20px;
+  width: 300px;
+}
+.input_field{
+  width: 300px;
+  height: 45px;
+  display: block;
+  margin: auto;
+}
