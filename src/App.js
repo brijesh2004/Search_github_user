@@ -29,7 +29,7 @@ function App() {
         Array.isArray(data)&&data.map((elem ,index) => (
           <div className='user_box'>
            {/* <p>username : - {elem.login}</p> */}
-           <img src={elem.avatar_url} width={80} height={80} /> <br />
+           <img src={elem.avatar_url} width={80} height={80} alt='profile'/> <br />
            {elem.login} <br />
            {/* <p>followers: {elem.followers}</p> */}
           <button><a href={elem.html_url} style={{textDecoration:'none'}}>Visit Profile</a></button> 
